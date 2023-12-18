@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.main-page {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.kasa-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.kasa-banner__nav__link {
+  margin-left: 50px;
+  font-size: 24px;
+  color: #FF6060;
+  text-decoration: none;
+}
+.kasa-banner__nav__link:hover {
+  text-decoration: underline;
+}
+
+.kasa-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 209px;
+}
+
+.kasa-collapse {
+  height: 52px;
+  background-color: #FF6060;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px, 20px, 10px, 10px;
+}
+.kasa-collapse__title {
+  font-size: 18px;
+  color: white;
+  margin-left: 25px;
+}
+.kasa-collapse__btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.kasa-collapse__btn :active {
+  transform: rotate(180deg); /* Applique une rotation de 180 degrés lorsqu'il est cliqué */
+}
+.kasa-collapse__btn__logo {
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

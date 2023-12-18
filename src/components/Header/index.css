@@ -1,0 +1,19 @@
+.kasa-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.kasa-banner__nav {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.kasa-banner__nav__link {
+  margin-left: 50px;
+  color: #FF6060;
+  text-decoration: none;
+}
+.kasa-banner__nav__link:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,72 @@
+$main-color: #FF6060;
+
+.main-page {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.kasa-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    &__nav {
+        
+        &__link {
+            margin-left: 50px;
+            font-size: 24px;
+            color: $main-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.kasa-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 209px;
+}
+
+.kasa-collapse {
+    height: 52px;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px, 20px, 10px, 10px;
+    &__title {
+        font-size: 18px;
+        color:white;
+        margin-left: 25px;
+    }
+    &__btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+        :active {
+            transform: rotate(180deg); /* Applique une rotation de 180 degrés lorsqu'il est cliqué */
+        }
+        &__logo {
+            color: white
+        }
+    }
+}
+// .btn {
+//     border: none;
+//     background: none;
+//     cursor: pointer;
+//   }
