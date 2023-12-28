@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 //import './index.css'
 
 function Banner() {
-    const title = 'Kasa'
+    //const title = 'Kasa'
     return (
         <div className='kasa-banner'>
             <img src={logo} alt='Kasa' className='kasa-banner__logo' />

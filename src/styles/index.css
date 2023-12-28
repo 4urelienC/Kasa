@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 35px;
 }
 .kasa-banner__nav__link {
   margin-left: 50px;
@@ -31,6 +32,73 @@
   background-color: black;
   color: white;
   height: 209px;
+  margin-top: 35px;
+}
+
+.homeTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 223px;
+  border-radius: 25px;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/homeTop.png");
+  margin-bottom: 35px;
+}
+.homeTop__title {
+  color: white;
+  font-size: 48px;
+}
+
+.kasaGalerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+}
+.kasaGalerie__card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border: 1px solid #ccc;
+  margin: 35px auto 0px auto;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.kasaGalerie__card__pix {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.kasaGalerie__card__title {
+  position: relative;
+  z-index: 1; /* Texte au-dessus de l'ombre */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  margin: 0;
+  color: #fff; /* Couleur du texte */
+  font-size: 14px; /* Taille de la police */
+  line-height: 1.4;
+  max-width: 230px;
+}
+.kasaGalerie__card__shadow {
+  position: absolute;
+  bottom: 0; /* Pour aligner le gradient en bas de la carte */
+  left: 0;
+  width: 100%;
+  height: 50%; /* Limite l'ombre à la moitié inférieure de la carte */
+  display: block;
+  content: "";
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 0; /* Ombre en dessous du texte */
 }
 
 .kasa-collapse {
@@ -42,24 +110,43 @@
   align-items: center;
   border-radius: 10px;
   padding: 10px, 20px, 10px, 10px;
+  margin-top: 10px;
 }
 .kasa-collapse__title {
   font-size: 18px;
   color: white;
   margin-left: 25px;
 }
-.kasa-collapse__btn {
-  border: none;
-  background: none;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-.kasa-collapse__btn :active {
-  transform: rotate(180deg); /* Applique une rotation de 180 degrés lorsqu'il est cliqué */
-}
-.kasa-collapse__btn__logo {
+.kasa-collapse__logo {
+  cursor: pointer; /* Change le curseur en pointeur au survol */
   color: white;
+  margin-right: 10px;
+}
+.kasa-collapse i {
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.kasa-collapse__btn {
+  display: none; /* Rend la checkbox invisible */
+}
+.kasa-collapse__btn:checked + label > i {
+  transform: rotateZ(180deg);
+}
+
+.kasa-collapse__content {
+  max-height: 0;
+  opacity: 0;
+  color: #FF6060; /* Couleur du texte */
+  font-size: 24px; /* Taille de la police */
+  background-color: #F6F6F6;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.kasa-collapse__content.open {
+  max-height: 1000px; /* Ou toute autre valeur suffisamment grande */
+  opacity: 1;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,20 +1,15 @@
 //import logo from './logo.svg';
+import Card from '../../components/Card'
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="homeTop">
+        <h1 className="homeTop__title">Chez vous, partout et ailleurs</h1>
+      </div>
+      <Card/>
     </div>
   );
 }
 
-export default App;
+export default Home;
