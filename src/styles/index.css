@@ -354,49 +354,44 @@
   }
 }
 
-.infoPart1 {
+.info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #FF6060;
   margin-top: 10px;
+}
+@media (max-width: 599px) {
+  .info {
+    flex-direction: column;
+  }
+}
+.info__L {
+  color: #FF6060;
   align-items: flex-start;
 }
-.infoPart1__L__title {
+.info__L__title {
   font-size: 36px;
   margin: 0px;
 }
-.infoPart1__L__loc {
+@media (max-width: 599px) {
+  .info__L__title {
+    font-size: 18px;
+  }
+}
+.info__L__loc {
   font-size: 18px;
   margin-top: 5px;
 }
-.infoPart1__R {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
+@media (max-width: 599px) {
+  .info__L__loc {
+    font-size: 14px;
+  }
 }
-.infoPart1__R__name {
-  font-size: 18px;
-  text-align: right;
-  margin-right: 5px;
-}
-.infoPart1__R__img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-}
-
-.infoPart2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.infoPart2__tags {
+.info__L__tags {
   display: flex;
   flex-direction: row;
 }
-.infoPart2__tags__tag {
+.info__L__tags__tag {
   margin-right: 10px;
   font-size: 14px;
   color: white;
@@ -409,10 +404,68 @@
   justify-content: center;
   padding: 0px 10px;
 }
-
-.stars {
+@media (max-width: 599px) {
+  .info__L__tags__tag {
+    min-width: 84px;
+    height: 18px;
+    font-size: 10px;
+  }
+}
+.info__R {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 599px) {
+  .info__R {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.info__R__hote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+@media (max-width: 599px) {
+  .info__R__hote {
+    margin-left: auto; /* Aligner à droite */
+    margin-right: 5px;
+  }
+}
+.info__R__hote__name {
+  font-size: 18px;
+  text-align: right;
+  margin-right: 5px;
+  color: #FF6060;
+}
+@media (max-width: 599px) {
+  .info__R__hote__name {
+    font-size: 12px;
+  }
+}
+.info__R__hote__img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+@media (max-width: 599px) {
+  .info__R__hote__img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.info__R__rates {
   font-size: 36px;
   margin-left: 5px;
+  text-align: right;
+  justify-content: right;
+}
+@media (max-width: 599px) {
+  .info__R__rates {
+    margin-right: auto; /* Aligner à gauche */
+    font-size: 14px;
+  }
 }
 
 .star-filled {

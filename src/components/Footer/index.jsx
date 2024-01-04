@@ -1,5 +1,5 @@
 import logo from '../../assets/LOGO_FOOT.png'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 //import './index.css'
 
 function Footer() {

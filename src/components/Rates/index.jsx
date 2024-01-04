@@ -6,7 +6,7 @@ function Rates(props) {
     const stars = '★'.repeat(rates) + '☆'.repeat(maxStars - rates);
 
     return (
-        <div className='rates'>
+        <div className='info__R__rates'>
             {stars.split('').map((star, index) => (
                 <span key={index} className={star === 'A' ? 'star-filled' : 'star-empty'}>
                     {star === '★' ? <i class="fa-solid fa-star stars star-filled"></i> : <i class="fa-solid fa-star stars star-empty"></i>}
