@@ -17,7 +17,7 @@ $main-color: #FF6060;
     &__logo {
         width: 210.32px;
         height: 68px;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             width: 145px;
             height: 46.88px;
         }
@@ -31,7 +31,7 @@ $main-color: #FF6060;
             &:hover {
                 text-decoration: underline;
             }
-            @media (max-width: 599px) {
+            @media (max-width: 725px) {
                 margin-left: 20px;
                 font-size: 12px;
             }
@@ -50,7 +50,7 @@ $main-color: #FF6060;
     margin-top: 35px;
     &__txt {
         font-size: 24px;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size: 12px;
         }
     }
@@ -66,15 +66,15 @@ $main-color: #FF6060;
     border-radius: 25px;
     background-color: black;
     margin-bottom: 35px;
-    @media (max-width: 599px) {
-        width: 335px;
+    @media (max-width: 725px) {
+        width: 100%;
         height: 111px;
     }
     &__title {
         color: white;
         font-size: 48px;
         z-index: 2;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size: 24px;
             margin-left:40px;
         }
@@ -100,12 +100,15 @@ $main-color: #FF6060;
     width: 100%;
     border-radius: 25px;
     background-color: #F6F6F6;
-    @media (max-width: 599px) {
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 725px) {
         grid-template-columns: 1fr; /* Une seule colonne sur mobile */
         border-radius: 0; /* Supprimez le cadre sur mobile en réinitialisant la bordure */
         padding: 0; /* Supprimez le padding sur mobile */
         grid-gap: 0px;
-        width: 340px;
+        width: 100%;
         background-color: white;
     }
     &__card {
@@ -117,8 +120,9 @@ $main-color: #FF6060;
         display: inline-block;
         overflow: hidden;
         border-radius: 10px;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             margin: 3px 0px ;
+            width: 100%;
         }
         &__pix {
             width: 100%;
@@ -166,14 +170,14 @@ $main-color: #FF6060;
     border-radius: 10px;
     padding: 10px, 20px, 10px, 10px;
     margin-top: 10px;
-    @media (max-width: 599px) {
+    @media (max-width: 725px) {
         height: 30px;
     }
     &__title {
         font-size: 18px;
         color:white;
         margin-left: 25px;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size: 13px;
         }
     }
@@ -181,7 +185,7 @@ $main-color: #FF6060;
         cursor: pointer; /* Change le curseur en pointeur au survol */
         color: white;
         margin-right: 10px ;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size:medium;
         }
     }
@@ -205,7 +209,7 @@ $main-color: #FF6060;
     background-color: #F6F6F6;
     overflow: hidden;
     transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
-    @media (max-width: 599px) {
+    @media (max-width: 725px) {
         font-size: 12px;
     }
 }
@@ -225,7 +229,7 @@ $main-color: #FF6060;
     &__title {
         font-size: 288px;
         margin: 0; /* Réduit la marge autour du titre à zéro */
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size: 96px;
         }
     }
@@ -233,7 +237,7 @@ $main-color: #FF6060;
         font-size: 36px;
         margin: 0; /* Réduit la marge autour du texte à zéro */
         text-align: center;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size: 18px;
             margin: 100px 0px;
         }
@@ -247,7 +251,7 @@ $main-color: #FF6060;
         &:hover {
             text-decoration: underline;
         }
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             font-size: 14px;
             margin-top: 0px;
         }
@@ -265,8 +269,8 @@ $main-color: #FF6060;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (max-width: 599px) {
-        width: 335px;
+    @media (max-width: 725px) {
+        width: 100%;
         height: 255px;
         border-radius: 10px;
     }
@@ -284,7 +288,7 @@ $main-color: #FF6060;
     z-index: 1;
     color: white;
     font-size: 40px;
-    @media (max-width: 599px) {
+    @media (max-width: 725px) {
         font-size: 20px;
         width: 40px;
         margin-left: -20px;
@@ -302,13 +306,13 @@ $main-color: #FF6060;
     &__pix {
         display: block;
         width: 100%;
-        height: auto;
+        min-height: 415px;
         object-fit: cover;
         object-position: center;
-        @media (max-width: 599px) {
-            width: auto;
-            height: 100%;
-        }
+        // @media (max-width: 725px) {
+        //     width: auto;
+        //     height: 100%;
+        // }
     }
     &__nbr {
         position: absolute;
@@ -319,7 +323,7 @@ $main-color: #FF6060;
         color: white;
         font-size: 18px;
         text-align: center;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             display: none;
         }
     }
@@ -330,7 +334,7 @@ $main-color: #FF6060;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
-    @media (max-width: 599px) {
+    @media (max-width: 725px) {
         flex-direction: column;
     }
     &__L {
@@ -339,14 +343,14 @@ $main-color: #FF6060;
         &__title {
             font-size: 36px;
             margin: 0px;
-            @media (max-width: 599px) {
+            @media (max-width: 725px) {
                 font-size: 18px;
             }
         }
         &__loc {
             font-size: 18px;
             margin-top: 5px;
-            @media (max-width: 599px) {
+            @media (max-width: 725px) {
                 font-size: 14px;
             }
         }
@@ -365,7 +369,7 @@ $main-color: #FF6060;
                 align-items: center; /* Aligner le texte verticalement au centre */
                 justify-content: center;
                 padding: 0px 10px ;
-                @media (max-width: 599px) {
+                @media (max-width: 725px) {
                     min-width: 84px;
                     height: 18px;
                     font-size: 10px;
@@ -376,7 +380,7 @@ $main-color: #FF6060;
     &__R {
         display:flex;
         flex-direction: column;
-        @media (max-width: 599px) {
+        @media (max-width: 725px) {
             flex-direction: row-reverse;
             align-items: center;
         }
@@ -385,7 +389,7 @@ $main-color: #FF6060;
             flex-direction: row;
             align-items: center;
             justify-content: right;
-            @media (max-width: 599px) {
+            @media (max-width: 725px) {
                 margin-left: auto; /* Aligner à droite */
                 margin-right: 5px;
             }
@@ -394,7 +398,7 @@ $main-color: #FF6060;
                 text-align: right;
                 margin-right: 5px;
                 color: $main-color;
-                @media (max-width: 599px) {
+                @media (max-width: 725px) {
                     font-size: 12px;
                 }
             }
@@ -402,7 +406,7 @@ $main-color: #FF6060;
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
-                @media (max-width: 599px) {
+                @media (max-width: 725px) {
                     width: 32px;
                     height: 32px;
                 }
@@ -413,7 +417,7 @@ $main-color: #FF6060;
             margin-left: 5px;
             text-align: right;
             justify-content: right;
-            @media (max-width: 599px) {
+            @media (max-width: 725px) {
                 margin-right: auto; /* Aligner à gauche */
                 font-size: 14px;
             }
@@ -435,5 +439,11 @@ $main-color: #FF6060;
     justify-content: space-between;
     &__size {
         width: 49%;
+        @media (max-width: 725px) {
+            width: 100%;
+        }
+    }
+    @media (max-width: 725px) {
+        flex-direction: column;
     }
 }

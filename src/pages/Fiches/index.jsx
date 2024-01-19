@@ -7,22 +7,33 @@ import Tags from '../../components/Tags'
 import Rates from '../../components/Rates'
 import Collapse from '../../components/Collapse'
 
+// Fonction de normalisation du titre
+function normalizeTitle(title) {
+  // Convertir en minuscules et remplacer les caractères spéciaux
+  const normalizedTitle = title.toLowerCase().replace(/[^\w\s]/gi, '');
+  return normalizedTitle;
+}
+
 function Fiches() {
-    let { title } = useParams();
+  let { title } = useParams();
 
-    const selectedAppart = appartList.find(item => item.title === title);
+  // Normalisation du titre
+  const normalizedTitle = normalizeTitle(title);
 
+  // Recherche de l'appartement correspondant dans la liste
+  const selectedAppart = appartList.find(item => normalizeTitle(item.title) === normalizedTitle);
 
-    if (!selectedAppart) {
-      return <Navigate to="/erreur" replace />;
-    }
+  // Redirection vers la page d'erreur si l'appartement n'est pas trouvé
+  if (!selectedAppart) {
+    return <Navigate to="/erreur" replace />;
+  }
 
-    const appartData = { ...selectedAppart };
+  // Utilisation des données de l'appartement trouvé
+  const appartData = { ...selectedAppart };
 
   return (
     <div>
       <Carrousel pictures={appartData.pictures} />
-      {/* <InfoPart1 title={appartData.title} loc={appartData.location} hostName={appartData.host.name} hostPix={appartData.host.picture}/> */}
       <div className='info'>
         <div className='info__L'>
           <h1 className='info__L__title'>{appartData.title}</h1>
